@@ -58,17 +58,22 @@ public class project {
                 } else {
                     magicBall = favNum * rand2;
                 }
-                if (magicBall > 75) {
+                while (magicBall > 75) {
                     magicBall -= 75;
                 }
 
                 int num1 = carYear + favNum;
+                if(num1>65){num1 -= 65;}
                 int num2 = 42;
+                if(num2>65){num2 -= 65;}
                 int num3 = act.charAt(0);
+                if(num3>65){num3 -= 65;}
                 int num4 = act.charAt(act.length() - 1);
+                if(num4>65){num4 -= 65;}
                 int num5 = qbNum + favNum + petAge;
+                if(num5>65){num5 -= 65;}
 
-                System.out.println("Lottery Numbers: " + num1 + num2 + num3 + num4 + num5 + "  Magic Ball: " + magicBall);
+                System.out.println("Lottery Numbers: " + num1 + " " + num2 + " " + num3 + " " + num4 + " " + num5 + "  Magic Ball: " + magicBall);
                 System.out.println("Would you to generate another number? ");
                 String againResponse = scanner.next();
                 if(againResponse.toUpperCase().equals("YES") || againResponse.toUpperCase().equals("Y")){
