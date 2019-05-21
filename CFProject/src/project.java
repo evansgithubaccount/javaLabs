@@ -1,0 +1,71 @@
+import java.util.Scanner;
+import java.util.Random;
+
+public class project {
+    public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+        Random rand = new Random();
+
+        ASCIIChars.printNumbers();
+        ASCIIChars.printLowerCase();
+        ASCIIChars.printUpperCase();
+        System.out.print("Please Enter Your Name: ");
+        String name = scanner.next();
+        System.out.println("Hello " + name);
+        System.out.println("Would you like to continue to the interactive portion?: ");
+        String response = scanner.next();
+
+        if(response.toUpperCase().equals("YES") || response.toUpperCase().equals("Y")) {
+            boolean again;
+            do {
+                System.out.print("What is the name of your favourite pet?");
+                String pet = scanner.next();
+                System.out.println("What is the age of your favourite pet? ");
+                int petAge = scanner.nextInt();
+                System.out.print("What is your lucky number");
+                int favNum = scanner.nextInt();
+                System.out.print("Do you have a favourite Quarterback? ");
+                String qbResponse = scanner.next();
+                int qbNum = 0;
+                if (qbResponse.toUpperCase().equals("YES") || qbResponse.toUpperCase().equals("Y")) {
+                    System.out.print("What is their jersey number? ");
+                    qbNum = scanner.nextInt();
+                }
+                System.out.print("What is the two-digit model year of your car? ");
+                int carYear = scanner.nextInt();
+                System.out.print("What is the first name of your favourite actor or actress? ");
+                String act = scanner.next();
+                System.out.println("Enter a random number between 0 and 50");
+                int randoNum = scanner.nextInt();
+
+                int rand1 = rand.nextInt(65);
+                int rand2 = rand.nextInt(65);
+                int rand3 = rand.nextInt(65);
+                int magicBall;
+                if (qbNum != 0) {
+                    magicBall = qbNum * rand1;
+                } else {
+                    magicBall = favNum * rand2;
+                }
+                if (magicBall > 75) {
+                    magicBall -= 75;
+                }
+
+                int num1 = carYear + favNum;
+                int num2 = 42;
+                int num3 = act.charAt(0);
+                int num4 = act.charAt(act.length() - 1);
+                int num5 = qbNum + favNum + petAge;
+
+                System.out.println("Lottery Numbers: " + num1 + num2 + num3 + num4 + num5 + "  Magic Ball: " + magicBall);
+                System.out.println("Would you to generate another number? ");
+                String againResponse = scanner.next();
+                if(againResponse.toUpperCase().equals("YES") || againResponse.toUpperCase().equals("Y")){
+                    again=true;
+                }else{again=false;}
+            }while(again==true);
+            }else{
+                System.out.println("OK, BYE");
+            }
+    }
+}
