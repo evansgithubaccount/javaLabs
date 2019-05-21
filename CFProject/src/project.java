@@ -17,13 +17,19 @@ public class project {
 
         if(response.toUpperCase().equals("YES") || response.toUpperCase().equals("Y")) {
             boolean again;
+            boolean done;
             do {
                 System.out.print("What is the name of your favourite pet?");
                 String pet = scanner.next();
-                System.out.println("What is the age of your favourite pet? ");
-                int petAge = scanner.nextInt();
-                System.out.print("What is your lucky number");
-                int favNum = scanner.nextInt();
+
+                int petAge=0;
+                do{scanner.nextLine();System.out.println("What is the age of your favourite pet? ");
+                try{int age = scanner.nextInt();done=true;}catch(Exception e){done=false;}}while(!done);
+
+                int favNum=0;
+                do{scanner.nextLine();System.out.print("What is your lucky number");
+                try{favNum = scanner.nextInt();done=true;}catch(Exception e){done=false;}}while(!done);
+
                 System.out.print("Do you have a favourite Quarterback? ");
                 String qbResponse = scanner.next();
                 int qbNum = 0;
@@ -31,12 +37,17 @@ public class project {
                     System.out.print("What is their jersey number? ");
                     qbNum = scanner.nextInt();
                 }
-                System.out.print("What is the two-digit model year of your car? ");
-                int carYear = scanner.nextInt();
+
+                int carYear = 00;
+                do{System.out.print("What is the two-digit model year of your car? ");
+                try{carYear = scanner.nextInt();done=true;}catch(Exception e){done=false;}}while(!done);
+
                 System.out.print("What is the first name of your favourite actor or actress? ");
                 String act = scanner.next();
-                System.out.println("Enter a random number between 0 and 50");
-                int randoNum = scanner.nextInt();
+
+                int randoNum=0;
+                do{System.out.println("Enter a random number between 0 and 50");
+                try{randoNum = scanner.nextInt();done=true;}catch(Exception e){done=false;}}while(!done);
 
                 int rand1 = rand.nextInt(65);
                 int rand2 = rand.nextInt(65);
