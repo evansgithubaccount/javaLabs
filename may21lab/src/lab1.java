@@ -91,11 +91,9 @@ public class lab1 {
             System.out.println(age>67 ? "You can start drawing Social Security":"You aren't old enough to start drawing Social Security");
             System.out.print("Do you want to answer the questions again? Y/N: ");
             String again = scanner.next();
-            switch(again){
-                case "Y": repeat = true;
-                case "y": repeat = true;
-                case "N": repeat = false;
-                default: repeat = false;
+            switch(again.toUpperCase()){
+                case "y": repeat = true;break;
+                default: repeat = false;break;
             }
         }while(repeat==true);
     }
@@ -105,17 +103,18 @@ public class lab1 {
         int total = 0;
         for(int i=0;i<myArray.length;){ myArray[i] = 2*(++i);}
         for(int i : myArray){
-            if(i%2 == 1){
+            if(i%2 != 0){
                 System.out.println(i);
             }else{
                 total += i;
             }
             if(i == boom){break;}
             }
+        System.out.println("Final total: " + total);
         return total;
     }
 
     public static void main(String[] args){
-        step1();
+        step5(7);
     }
 }
