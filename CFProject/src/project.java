@@ -41,14 +41,14 @@ public class project {
                 }
 
                 int carYear = 00;
-                do{System.out.print("What is the two-digit model year of your car? ");
+                do{scanner.nextInt();System.out.print("What is the two-digit model year of your car? ");
                 try{carYear = scanner.nextInt();done=true;}catch(Exception e){done=false;}}while(!done);
 
                 System.out.print("What is the first name of your favourite actor or actress? ");
                 String act = scanner.next();
 
                 int randoNum=0;
-                do{System.out.print("Enter a random number between 0 and 50: ");
+                do{scanner.nextInt();System.out.print("Enter a random number between 0 and 50: ");
                 try{randoNum = scanner.nextInt();done=true;}catch(Exception e){done=false;}}while(!done);
 
                 int rand1 = rand.nextInt(65);
