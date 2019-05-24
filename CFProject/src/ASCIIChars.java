@@ -12,7 +12,7 @@ public class ASCIIChars {
     }
 
     public static void printUpperCase(){
-        for(int i=60;i<91;i++){
+        for(int i=65;i<91;i++){
             System.out.println((char)i);
         }
     }
