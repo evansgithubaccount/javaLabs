@@ -2,13 +2,15 @@ import java.util.Scanner;
 import java.util.Random;
 
 public class project {
+    ASCIIChars ascii = new ASCIIChars();
+    
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
         Random rand = new Random();
 
-        ASCIIChars.printNumbers();
-        ASCIIChars.printLowerCase();
-        ASCIIChars.printUpperCase();
+        ascii.printNumbers();
+        ascii.printLowerCase();
+        ascii.printUpperCase();
         System.out.print("Please Enter Your Name: ");
         String name = scanner.next();
         System.out.println("Hello " + name);
